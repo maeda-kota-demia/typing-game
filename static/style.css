@@ -51,6 +51,61 @@ input {
 
 }
 
+.reload {
+    cursor: pointer;
+    width: fit-content;
+    padding: 1% 5%;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    left: 2vw;
+}
+
+.reload:hover{
+    opacity: 0.5;
+}
+
+.level-wrapper {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.level-options {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.level-heading {
+    text-align: center;
+    width: 50%;
+}
+
+.level_btn {
+    background-color: rgba(15,155,32,0.26);
+    border: 1px solid #0f9b20;
+    padding: 1em 2em;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    flex-basis: 30%;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    min-width: 242px;
+}
+
+.active-level {
+    background-color: #7eee3e;
+    color: #fff;
+}
+
+#info {
+    margin: 25vh auto;
+}
+
 .panel-container {
   display: flex;
   width: 70%;
@@ -58,6 +113,16 @@ input {
   min-width: 400px;
   position: relative;
   margin: 0 auto;
+}
+
+.panel-container-play {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .panel {
@@ -75,6 +140,30 @@ input {
   margin-left: 5%;
 }
 
+.faded {
+    opacity: 0.4;
+    transform: scale(0.8);
+}
+.active {
+    background: #ffd700;
+    box-shadow: 0 0 14px #ffd700, 0 2px 8px #4448;
+}
+
+.untyped {
+    color: #000;
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+.typed {
+    color: #ccc;
+font-size: 1.2em;
+}
+
+.active span:last-child{
+    color: #d33;
+}
+
 .game__info {
   display: flex;
   justify-content: space-around;
@@ -90,7 +179,7 @@ input {
 }
 
 #results  {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
